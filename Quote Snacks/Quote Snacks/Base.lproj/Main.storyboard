@@ -57,7 +57,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1101.5999999999999" y="-564.46776611694156"/>
+            <point key="canvasLocation" x="1055" y="-564"/>
         </scene>
         <!--Message View Controller-->
         <scene sceneID="fez-CJ-qUd">
@@ -80,11 +80,24 @@
                                     <outletCollection property="gestureRecognizers" destination="DTo-T1-so8" appends="YES" id="8eq-oK-Y81"/>
                                 </connections>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIB-cf-I6Z">
+                                <rect key="frame" x="5" y="25" width="34" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="8ld-X0-W7K" eventType="touchUpInside" id="ace-Vk-y4d"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="XaS-NX-gBF" firstAttribute="top" secondItem="KmH-18-04r" secondAttribute="top" id="BES-Zs-jYM"/>
+                            <constraint firstItem="QIB-cf-I6Z" firstAttribute="top" secondItem="KmH-18-04r" secondAttribute="top" constant="5" id="CnJ-6F-dlh"/>
+                            <constraint firstItem="KmH-18-04r" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="QIB-cf-I6Z" secondAttribute="bottom" constant="612" id="DqG-DQ-Xsh"/>
+                            <constraint firstItem="KmH-18-04r" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QIB-cf-I6Z" secondAttribute="trailing" constant="336" id="H7D-sz-zDk"/>
                             <constraint firstItem="KmH-18-04r" firstAttribute="bottom" secondItem="I0U-JX-paV" secondAttribute="bottom" id="LQJ-PI-lwO"/>
+                            <constraint firstItem="QIB-cf-I6Z" firstAttribute="leading" secondItem="KmH-18-04r" secondAttribute="leading" constant="5" id="M0J-t2-vBV"/>
                             <constraint firstItem="XaS-NX-gBF" firstAttribute="leading" secondItem="KmH-18-04r" secondAttribute="leading" id="MK8-lg-9Rn"/>
                             <constraint firstItem="I0U-JX-paV" firstAttribute="top" secondItem="KmH-18-04r" secondAttribute="top" id="Pna-Zq-tg8"/>
                             <constraint firstItem="KmH-18-04r" firstAttribute="trailing" secondItem="XaS-NX-gBF" secondAttribute="trailing" id="aiL-Qu-Ogn"/>
@@ -95,6 +108,7 @@
                         <viewLayoutGuide key="safeArea" id="KmH-18-04r"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="QIB-cf-I6Z" id="HcN-8A-QVo"/>
                         <outlet property="imageView" destination="I0U-JX-paV" id="WcF-Be-oWL"/>
                         <outlet property="quoteLabel" destination="XaS-NX-gBF" id="IiZ-BB-Vni"/>
                     </connections>
@@ -106,7 +120,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1948" y="-564"/>
+            <point key="canvasLocation" x="2021.5999999999999" y="-564.46776611694156"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1Bp-J6-8do">
